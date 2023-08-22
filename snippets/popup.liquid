@@ -1,0 +1,164 @@
+<div class="main-container">
+{% for collection in collections[section.settings.collection_to_display.handle].products %}
+  
+  <div class="modal">
+    <div>
+     
+      <h2>{{ collection.title }}</h2>
+      <a href= "{{ collection.url }}">
+      <img src="{{ collection.featured_image | img_url: 'medium' }}" alt="Image">
+      </a>
+    </div>
+    <button class="popup-open" data-id ="{{ collection.variants[0].id }}" data-name="{{ collection.title  }}" data-price="{{ collection.price }}" data-image="{{ collection.featured_image  | img_url: 'large' }}" data-link = "{{ collection.url }}">Popup</button>
+  
+  </div>
+
+  <div class="popup-container">
+    <div class = "image-container">
+      <a class="popup-container-link" href = " ">
+        <img class="popup-container-image" src=" ">
+      </a>
+    </div>
+
+    <div class="detail-container">
+      
+      <img class="popup-container-close icon" src="https://t3.ftcdn.net/jpg/04/37/51/90/360_F_437519066_OLrSfrnBk5hioGeje96IZ0ejr8Xrozw3.jpg"/>
+      <p class="popup-container-title"> </p>
+      <p class="popup-container-price"></p>  
+      <button class="popup-container-sizechart" >Size Chart</button>
+    </div>
+    
+  </div>
+{% endfor %}
+
+ <div class="sizechart" >
+      
+       <img class="icon sizechart-button" src="https://t3.ftcdn.net/jpg/04/37/51/90/360_F_437519066_OLrSfrnBk5hioGeje96IZ0ejr8Xrozw3.jpg" />
+      <img class= "sizechart-img" src="https://cdn.shopify.com/s/files/1/0130/8321/3883/files/Sizing_Chart.png?v=1652841021">
+</div>
+
+</div>
+
+<script>
+  
+    $(".popup-open").click(function() {
+
+        $(".popup-container").css("display", "flex");
+        const element = $(this).attr("data-name"); 
+        const price = $(this).attr("data-price"); 
+        const image = $(this).attr("data-image")
+        const link = $(this).attr("data-link")
+
+      console.log("Link is : " , link)
+      
+        $(".popup-container-title").text(element);
+        $(".popup-container-price").text(price)
+        $(".popup-container-image").attr("src",image)
+        $(".popup-container-link").attr("href",link)
+        
+        
+   
+    });
+
+  $(".popup-container-close").click(function() {       
+  $(".popup-container").css("display", "none"); 
+    });
+
+  $(".sizechart-button").click(function() {       
+  $(".sizechart").css("display", "none"); 
+    });
+
+  $(".popup-container-sizechart").click(function() {       
+  $(".sizechart").css("display", "block"); 
+   
+    });
+  $(".popup-container-close").click(function() {       
+  $(".sizechart").css("display", "none"); 
+    });
+
+  
+   $(".popup-close").click(function() {       
+  $(".popup-container").css("display", "none"); 
+    });
+  
+  
+   
+</script>
+
+<style>
+
+  .main-container{
+    position:relative;
+    display:flex;
+    max-width:1800px;
+    margin:0 auto;
+    
+  }
+  .popup-container{
+    display:none;
+    position:absolute;
+    color:black;
+    /* background-color:#FAF6C3; */
+    background-color:white;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    left:30%;
+    bottom:40%;
+    min-width:50%;
+  }
+
+  .popup-container-close{
+    float:right;
+    margin:10px;
+  }
+
+  .modal{
+     border:1px black;
+     margin:10px;
+     width:30%;
+  }
+
+
+/* ////////////////////////////////// */
+
+  .detail-container{
+    position:relative;
+    min-width:30%;
+  }
+
+  .sizechart{
+    display:none;
+    position:absolute;
+    /* width:750px;
+    height:800px; */
+    left:35%;
+    bottom:0px;
+    z-index:10;
+    
+    transition:1s;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    
+  }
+
+
+  .sizechart-button{
+   position:absolute;
+   right:30px;
+   top:20px;
+    
+  }
+  .sizechart-img{
+    width:700px;
+    height:600px;
+  }
+  
+
+  .icon{
+    height:30px;
+    width:30px;
+    position:absolute;
+    right:0px;
+  }
+  
+</style>
+
+
