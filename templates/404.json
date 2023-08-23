@@ -52,6 +52,7 @@
     "0b31ada6-ac49-412b-94ee-5bda3b498bbd": {
       "type": "videobanner",
       "settings": {
+        "image": "shopify:\/\/shop_images\/banner13.jpg",
         "video_link": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/d799862b10484ff2adbd0c7bd6f11efe.mp4",
         "video_link_mobile": "",
         "title": "Lorem ipsum dolor amit",
