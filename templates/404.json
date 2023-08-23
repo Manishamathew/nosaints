@@ -1,1 +1,69 @@
-{"sections":{"main":{"type":"main-404","settings":{}}},"order":["main"]}
+{
+  "sections": {
+    "main": {
+      "type": "main-404",
+      "disabled": true,
+      "settings": {
+      }
+    },
+    "fa73bae3-e0a8-4e4e-b560-8eace7b8bbce": {
+      "type": "rich-text",
+      "blocks": {
+        "template--20544188317986__fa73bae3-e0a8-4e4e-b560-8eace7b8bbce-heading-1": {
+          "type": "heading",
+          "settings": {
+            "heading": "Talk about your brand",
+            "heading_size": "h1"
+          }
+        },
+        "template--20544188317986__fa73bae3-e0a8-4e4e-b560-8eace7b8bbce-text-1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Share information about your brand with your customers. Describe a product, make announcements, or welcome customers to your store.<\/p>"
+          }
+        },
+        "template--20544188317986__fa73bae3-e0a8-4e4e-b560-8eace7b8bbce-button-1": {
+          "type": "button",
+          "settings": {
+            "button_label": "Button label",
+            "button_link": "",
+            "button_style_secondary": false,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "template--20544188317986__fa73bae3-e0a8-4e4e-b560-8eace7b8bbce-heading-1",
+        "template--20544188317986__fa73bae3-e0a8-4e4e-b560-8eace7b8bbce-text-1",
+        "template--20544188317986__fa73bae3-e0a8-4e4e-b560-8eace7b8bbce-button-1"
+      ],
+      "disabled": true,
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
+    "0b31ada6-ac49-412b-94ee-5bda3b498bbd": {
+      "type": "videobanner",
+      "settings": {
+        "video_link": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/d799862b10484ff2adbd0c7bd6f11efe.mp4",
+        "video_link_mobile": "",
+        "title": "Lorem ipsum dolor amit",
+        "text": "qwewq e e e dsd",
+        "button_label": "View All",
+        "button_link": "shopify:\/\/collections"
+      }
+    }
+  },
+  "order": [
+    "main",
+    "fa73bae3-e0a8-4e4e-b560-8eace7b8bbce",
+    "0b31ada6-ac49-412b-94ee-5bda3b498bbd"
+  ]
+}
